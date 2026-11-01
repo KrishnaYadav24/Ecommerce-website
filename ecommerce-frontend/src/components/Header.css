@@ -1,0 +1,648 @@
+/* =========================================
+   SHOPNOVA HEADER — PREMIUM DESIGN
+========================================= */
+
+.shopnova-announcement,
+.shopnova-header,
+.shopnova-header * {
+  box-sizing: border-box;
+}
+
+.shopnova-announcement {
+  display: flex;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 8px 12px;
+  background: #191916;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-align: center;
+}
+
+.announcement-star {
+  color: #cbb58e;
+  font-size: 10px;
+}
+
+/* Main header */
+
+.shopnova-header {
+  position: relative;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(18px, 3vw, 40px);
+  min-height: 80px;
+  padding: 0 5%;
+  border-bottom: 1px solid #e9e8e3;
+  background: #fff;
+}
+
+.shopnova-logo {
+  flex-shrink: 0;
+  color: #191916;
+  font-size: 26px;
+  font-weight: 850;
+  letter-spacing: -1.7px;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.shopnova-logo span {
+  color: #a28b67;
+}
+
+/* Navigation */
+
+.shopnova-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(17px, 2.2vw, 32px);
+}
+
+.shopnova-nav > a {
+  position: relative;
+  padding: 11px 0;
+  color: #69685f;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.shopnova-nav > a:hover,
+.shopnova-nav > a.active {
+  color: #191916;
+}
+
+.shopnova-nav > a.active::after {
+  position: absolute;
+  right: 0;
+  bottom: 3px;
+  left: 0;
+  height: 1px;
+  background: #191916;
+  content: "";
+}
+
+/* Category dropdown */
+
+.header-category-menu {
+  position: relative;
+}
+
+.header-category-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 0;
+  border: 0;
+  background: transparent;
+  color: #69685f;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.header-category-button:hover,
+.header-category-button.category-button-active {
+  color: #191916;
+}
+
+.header-category-button svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.category-chevron-open {
+  transform: rotate(180deg);
+}
+
+.header-category-dropdown {
+  position: absolute;
+  z-index: 100;
+  top: calc(100% + 18px);
+  left: -24px;
+  width: 310px;
+  max-height: min(70vh, 480px);
+  overflow-y: auto;
+  padding: 20px;
+  border: 1px solid #e9e8e3;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 18px 45px rgb(25 25 22 / 12%);
+  animation: header-dropdown-in 0.18s ease both;
+}
+
+@keyframes header-dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-dropdown-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 17px;
+  border-bottom: 1px solid #e9e8e3;
+}
+
+.header-dropdown-heading > div > span {
+  color: #88877e;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.header-dropdown-heading h3 {
+  margin: 7px 0 0;
+  color: #191916;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+}
+
+.header-dropdown-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 0;
+  border-radius: 6px;
+  background: #f5f5f1;
+  color: #191916;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.header-dropdown-close:hover {
+  background: #eae9e2;
+}
+
+.header-dropdown-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 2px;
+  border: 0;
+  border-bottom: 1px solid #efeee9;
+  background: #fff;
+  color: #494940;
+  font: inherit;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    padding 0.2s ease;
+}
+
+.header-dropdown-item:last-of-type {
+  border-bottom: 0;
+}
+
+.header-dropdown-item svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.header-dropdown-item:hover {
+  padding-right: 5px;
+  padding-left: 5px;
+  color: #9a7746;
+}
+
+.header-dropdown-item:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.header-category-empty {
+  margin: 15px 0 0;
+  color: #77766e;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* Right-side actions */
+
+.shopnova-header-actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: clamp(11px, 1.5vw, 20px);
+}
+
+.header-search-form {
+  display: flex;
+  width: clamp(120px, 11vw, 165px);
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #deddd6;
+  color: #77766e;
+  transition: border-color 0.2s ease;
+}
+
+.header-search-form:focus-within {
+  border-bottom-color: #191916;
+}
+
+.header-search-submit {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #77766e;
+  cursor: pointer;
+}
+
+.header-search-submit:hover {
+  color: #191916;
+}
+
+.header-search-form input {
+  width: 100%;
+  min-width: 0;
+  padding: 2px 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #191916;
+  font: inherit;
+  font-size: 11px;
+}
+
+.header-search-form input::placeholder {
+  color: #929189;
+}
+
+.header-search-form input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+.header-mobile-search-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #191916;
+  cursor: pointer;
+}
+
+.header-mobile-search-toggle:hover {
+  background: #f5f5f1;
+}
+
+.header-action {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 6px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #191916;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.header-action:hover {
+  background: #f4f3ef;
+  color: #8c714b;
+}
+
+.header-bag span {
+  font-size: 11px;
+  font-weight: 550;
+}
+
+.header-menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #191916;
+  cursor: pointer;
+}
+
+.header-menu:hover {
+  background: #f4f3ef;
+}
+
+/* Keyboard accessibility */
+
+.shopnova-header a:focus-visible,
+.shopnova-header button:focus-visible,
+.header-search-form input:focus-visible {
+  outline: 2px solid #9a835f;
+  outline-offset: 4px;
+}
+
+/* Laptop / smaller desktop */
+
+@media (max-width: 1100px) {
+  .shopnova-header {
+    gap: 18px;
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+
+  .shopnova-logo {
+    font-size: 23px;
+  }
+
+  .shopnova-nav {
+    gap: 15px;
+  }
+
+  .shopnova-nav > a,
+  .header-category-button {
+    font-size: 11px;
+  }
+
+  .shopnova-header-actions {
+    gap: 10px;
+  }
+
+  .header-search-form {
+    width: 110px;
+  }
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 760px) {
+  .shopnova-announcement {
+    min-height: 30px;
+    gap: 7px;
+    padding: 7px 10px;
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  .shopnova-header {
+    display: grid;
+    grid-template-columns: 30px minmax(0, 1fr) auto;
+    gap: 10px;
+    min-height: 68px;
+    padding: 0 5%;
+  }
+
+  .header-menu {
+    display: inline-flex;
+  }
+
+  .shopnova-logo {
+    justify-self: start;
+    font-size: 22px;
+  }
+
+  .shopnova-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 6% 17px;
+    border-bottom: 1px solid #e9e8e3;
+    background: #fff;
+    box-shadow: 0 14px 25px rgb(0 0 0 / 6%);
+  }
+
+  .shopnova-nav.shopnova-nav-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shopnova-nav > a {
+    padding: 14px 0;
+    border-bottom: 1px solid #efeee9;
+    font-size: 13px;
+  }
+
+  .shopnova-nav > a.active::after {
+    display: none;
+  }
+
+  .header-category-menu {
+    border-bottom: 1px solid #efeee9;
+  }
+
+  .header-category-button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    font-size: 13px;
+  }
+
+  .header-category-dropdown {
+    position: static;
+    width: 100%;
+    max-height: 270px;
+    margin: 0 0 13px;
+    padding: 14px;
+    border-radius: 8px;
+    box-shadow: none;
+    animation: none;
+  }
+
+  .header-dropdown-heading h3 {
+    font-size: 18px;
+  }
+
+  .shopnova-header-actions {
+    justify-self: end;
+    gap: 7px;
+  }
+
+  /* Mobile search stays hidden until its icon is clicked. */
+  .header-search-form {
+    display: none;
+  }
+
+  .header-search-form.header-search-form-open {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+    left: 0;
+    z-index: 120;
+    display: flex;
+    width: auto;
+    gap: 11px;
+    margin: 0;
+    padding: 14px 5%;
+    border: 1px solid #e9e8e3;
+    border-right: 0;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 12px 20px rgb(0 0 0 / 6%);
+  }
+
+  .header-search-form.header-search-form-open input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    font-size: 13px;
+  }
+
+  .header-search-form.header-search-form-open .header-search-submit {
+    display: inline-flex;
+  }
+
+  .header-search-close {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    border: 0;
+    background: transparent;
+    color: #55554e;
+    cursor: pointer;
+  }
+
+  .header-mobile-search-toggle {
+    display: inline-flex;
+  }
+
+  .header-action {
+    padding: 5px;
+  }
+
+  .header-bag span {
+    display: none;
+  }
+}
+
+/* Very small mobile screens */
+
+@media (max-width: 380px) {
+  .shopnova-header {
+    grid-template-columns: 27px minmax(0, 1fr) auto;
+    gap: 6px;
+    padding-right: 3%;
+    padding-left: 3%;
+  }
+
+  .shopnova-logo {
+    font-size: 20px;
+    letter-spacing: -1.3px;
+  }
+
+  .shopnova-header-actions {
+    gap: 4px;
+  }
+
+  .header-action svg,
+  .header-mobile-search-toggle svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .shopnova-announcement {
+    font-size: 7px;
+    letter-spacing: 0.45px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .shopnova-header *,
+  .shopnova-header *::before,
+  .shopnova-header *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =====================================
+   SHOPNOVA — LARGER SEARCH BAR
+===================================== */
+
+@media (min-width: 1101px) {
+  .shopnova-header .header-search-form {
+    width: clamp(220px, 19vw, 270px);
+    min-height: 44px;
+    gap: 10px;
+    padding: 0 12px;
+    border: 1px solid #dce5f1;
+    border-radius: 9px;
+    background: #f8faff;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .shopnova-header .header-search-form:focus-within {
+    border-color: #7ba9e2;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgb(23 105 194 / 8%);
+  }
+
+  .shopnova-header .header-search-form input {
+    font-size: 12px;
+  }
+
+  .shopnova-header .header-search-submit svg {
+    width: 19px;
+    height: 19px;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1100px) {
+  .shopnova-header .header-search-form {
+    width: clamp(160px, 18vw, 205px);
+    min-height: 42px;
+    padding: 0 9px;
+    border: 1px solid #dce5f1;
+    border-radius: 8px;
+    background: #f8faff;
+  }
+
+  .shopnova-header .header-search-form input {
+    font-size: 11px;
+  }
+}
